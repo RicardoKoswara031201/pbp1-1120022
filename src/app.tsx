@@ -27,8 +27,9 @@ import UpdateMenu from "./pages/UpdateMenu";
 export default function App() {
   return (
     <BrowserRouter>
+      <h1>KFC</h1>
+      
       <Navbar />
-      <h1>running</h1>
 
       <Routes>
         <Route path="/" element={<ListMenu />} />
