@@ -1,23 +1,3 @@
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Navbar from "./components/Navbar";
-// import ListMenu from "./pages/ListMenu";
-// import AddMenu from "./pages/AddMenu";
-// import UpdateMenu from "./pages/UpdateMenu";
-
-// export default function App() {
-//   return (
-//     <BrowserRouter>
-//       <Navbar />
-//       <Routes>
-//         <h1>running</h1>
-//         <Route path="/" element={<ListMenu />} />
-//         <Route path="/add" element={<AddMenu />} />
-//         <Route path="/update/:id" element={<UpdateMenu />} />
-//       </Routes>
-//     </BrowserRouter>
-//   );
-// }
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ListMenu from "./pages/ListMenu";
