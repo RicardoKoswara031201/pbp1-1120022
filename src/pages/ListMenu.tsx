@@ -11,19 +11,20 @@ export default function ListMenu() {
     getMenus()
       .then(setMenus)
       .catch((err) => {
-        if (err instanceof Error) {
-          setError(err.message);
-        } else {
-          setError("Failed to fetch menu");
-        }
+        setError(err instanceof Error ? err.message : "Failed to fetch menu");
       });
   }, []);
 
-  async function handleDelete(id?: number) {
+  async function handleDelete(id?: string) {
     if (!id) return;
 
-    await deleteMenu(id.toString());
-    setMenus((prev) => prev.filter((m) => m.id !== id));
+    try {
+      await deleteMenu(id);
+      setMenus((prev) => prev.filter((m) => m.id !== id));
+    } catch (err) {
+      console.error(err);
+      alert("Gagal menghapus menu");
+    }
   }
 
   if (error) return <p>{error}</p>;

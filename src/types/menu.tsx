@@ -3,7 +3,7 @@ export type Label = "vegan" | "gluten_free" | "halal" | "low_cal";
 export type Kategori = "makanan" | "minuman";
 
 export interface Menu {
-  id?: number;
+  id?: string;
   nama: string;
   deskripsi: string;
   harga: number;
